@@ -1,8 +1,11 @@
 import Vue from 'vue'
-import App from './App.vue'
+import defaultTemplate from './Layouts/defaultTemplate'
+import router from './routes'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  render: h => h(defaultTemplate),
+  router,
+  mode: 'history'
 }).$mount('#app')
